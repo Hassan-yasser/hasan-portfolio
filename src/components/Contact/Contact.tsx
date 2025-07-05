@@ -13,8 +13,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;
-    // @ts-ignore
+    const form: any = e.currentTarget;
     const name = form.name.value.trim();
     const email = form.email.value.trim();
     const message = form.message.value.trim();
