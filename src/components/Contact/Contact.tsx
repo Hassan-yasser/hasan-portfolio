@@ -4,6 +4,11 @@ import emailjs from "emailjs-com";
 import ToasterSoonerSuccess from "../Toaser/ToasterSoonerSuccess";
 import ToasterSoonerError from "../Toaser/ToasterSoonerError";
 import ContactSecctionUI from "./ContactSecctionUI";
+type ContactFormElements = HTMLFormElement & {
+  name: HTMLInputElement;
+  email: HTMLInputElement;
+  message: HTMLTextAreaElement;
+};
 const Contact = () => {
   const [formErrors, setFormErrors] = useState({
     name: "",
@@ -13,7 +18,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form: any = e.currentTarget;
+    const form = e.currentTarget as ContactFormElements;
     const name = form.name.value.trim();
     const email = form.email.value.trim();
     const message = form.message.value.trim();
