@@ -59,7 +59,7 @@ const AllProjects = () => {
                   setActiveProject(label);
                   router.push(`/projects?${label}=${label}`);
                 }}
-                className={`cursor-pointer flex flex-col items-center justify-center gap-2 px-4 py-3 rounded-xl border transition-all
+                className={`cursor-pointer my-2.5  flex flex-col items-center justify-center gap-2 px-4 py-3 rounded-xl border transition-all
                   ${
                     isActive
                       ? "bg-gradient-to-tr from-purple-600 to-indigo-500 text-white shadow-lg border-white/20 scale-[1.05]"
